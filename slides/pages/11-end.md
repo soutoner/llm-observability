@@ -40,7 +40,7 @@ number: "07"
 
 <div style="padding: 2rem 3rem; background: rgba(40,48,70,0.06); border-radius: 16px; text-align: center; border: 2px dashed rgba(120,116,240,0.3);">
   <p style="font-size: 1.1rem; color: #283046; opacity: 0.6; margin: 0 0 0.5rem;"><!-- replace with actual repo URL --></p>
-  <p style="font-size: 1.6rem; font-weight: 700; color: #7874F0; font-family: monospace; margin: 0;">github.com/YOUR_ORG/YOUR_REPO</p>
+  <p style="font-size: 1.6rem; font-weight: 700; color: #7874F0; font-family: monospace; margin: 0;">github.com/soutoner/llm-observability</p>
 </div>
 
 <p style="color: #283046; opacity: 0.6; font-size: 0.9rem;">Demo agent · Docker Compose stack · instrumented with Langfuse</p>
