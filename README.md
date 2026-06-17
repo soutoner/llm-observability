@@ -32,10 +32,10 @@ docker-compose.yml   # Langfuse + Postgres
 ## Quick start
 
 ```bash
-make up              # start Langfuse
+make docker-up       # start Langfuse
 cp demo/.env.example demo/.env
-ollama pull qwen2.5:7b
-make demo            # run the agent
+make model-pull      # download qwen2.5:7b
+make run             # run the agent
 make slides          # start the slide deck
 ```
 
@@ -48,7 +48,7 @@ Run `make` with no arguments to see all available targets.
 The `docker-compose.yml` starts two containers: **Langfuse** (port 3000) and **Postgres** (port 5432).
 
 ```bash
-make up
+make docker-up
 ```
 
 Langfuse starts pre-configured with a demo user and fixed API keys — no manual setup needed:
@@ -62,8 +62,8 @@ Langfuse starts pre-configured with a demo user and fixed API keys — no manual
 Sign-ups are disabled. API keys are pre-seeded and already match `demo/.env.example`.
 
 ```bash
-make down    # stop containers, keep data
-make clean   # remove containers, volumes, and images
+make docker-down     # stop containers, keep data
+make docker-clean    # remove containers, volumes, and images
 ```
 
 ### 2. Configure the demo
@@ -77,16 +77,21 @@ The Langfuse keys in `.env.example` match the pre-seeded project — no edits ne
 ### 3. Pull the local model (Ollama)
 
 ```bash
-ollama pull qwen2.5:7b
+make model-pull        # download qwen2.5:7b
+make model-run         # start an interactive session (optional, for testing)
+make model-stop        # unload the model from memory
+make model-rm          # delete the model from disk
 ```
+
+Override the model name with `make model-pull MODEL_NAME=llama3.2`.
 
 To use a cloud model instead, set `MODEL=gpt-4o` and `OPENAI_API_KEY=sk-...` in `demo/.env`.
 
 ### 4. Run the demo
 
 ```bash
-make demo              # run with Langfuse tracing
-make demo-regression   # run good-data vs bad-data comparison
+make run               # run with Langfuse tracing
+make run-regression    # run good-data vs bad-data comparison
 ```
 
 Check traces at http://localhost:3000/traces.

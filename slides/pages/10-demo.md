@@ -15,7 +15,7 @@ number: "06"
 
 <div style="margin-top: 1.5rem; border: 2px dashed rgba(120,116,240,0.3); border-radius: 12px; padding: 3rem 2rem; text-align: center; color: #7874F0; font-weight: 600;">
   <!-- Replace with: <video src="./demo.mp4" controls style="width:100%; border-radius: 12px;" /> -->
-  video placeholder — record Langfuse UI after running agent_traced.py
+  video placeholder 
 </div>
 
 <!--
