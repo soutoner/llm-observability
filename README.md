@@ -4,14 +4,14 @@
 
 ## Prerequisites
 
-| Tool | Version | Install |
-|---|---|---|
-| [Docker](https://docs.docker.com/get-docker/) | 24+ | Required for Langfuse |
-| [Python](https://python.org) | 3.10+ | Required for the demo |
-| [uv](https://docs.astral.sh/uv/) | latest | `curl -LsSf https://astral.sh/uv/install.sh \| sh` |
-| [Ollama](https://ollama.com) | latest | Run natively — **do not containerise** (no GPU access in Docker on macOS) |
-| [Node.js](https://nodejs.org) | 18+ | Required for the slides |
-| [pnpm](https://pnpm.io) | 8+ | `npm install -g pnpm` |
+| Tool                                          | Version | Install                                                                   |
+| --------------------------------------------- | ------- | ------------------------------------------------------------------------- |
+| [Docker](https://docs.docker.com/get-docker/) | 24+     | Required for Langfuse                                                     |
+| [Python](https://python.org)                  | 3.10+   | Required for the demo                                                     |
+| [uv](https://docs.astral.sh/uv/)              | latest  | `curl -LsSf https://astral.sh/uv/install.sh \| sh`                        |
+| [Ollama](https://ollama.com)                  | latest  | Run natively — **do not containerise** (no GPU access in Docker on macOS) |
+| [Node.js](https://nodejs.org)                 | 18+     | Required for the slides                                                   |
+| [pnpm](https://pnpm.io)                       | 8+      | `npm install -g pnpm`                                                     |
 
 > **Cloud LLM alternative:** if you skip Ollama, set `MODEL=gpt-4o` and `OPENAI_API_KEY=sk-...` in `demo/.env`.
 
@@ -53,11 +53,11 @@ make up
 
 Langfuse starts pre-configured with a demo user and fixed API keys — no manual setup needed:
 
-| | |
-|---|---|
-| URL | http://localhost:3000 |
-| Email | `demo@example.com` |
-| Password | `demo1234` |
+|          |                       |
+| -------- | --------------------- |
+| URL      | http://localhost:3000 |
+| Email    | `demo@example.com`    |
+| Password | `demo1234`            |
 
 Sign-ups are disabled. API keys are pre-seeded and already match `demo/.env.example`.
 
@@ -95,13 +95,4 @@ Check traces at http://localhost:3000/traces.
 
 ```bash
 make slides
-```
-
-## Recording the demo
-
-Record the Langfuse UI trace view after running `make demo`, then replace the placeholder in the slides:
-
-```html
-<!-- slides/pages/10-demo.md — "The trace" slide -->
-<video src="./demo.mp4" controls style="width:100%; border-radius: 12px;" />
 ```

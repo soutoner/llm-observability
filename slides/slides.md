@@ -5,6 +5,7 @@ info: 45-minute technical talk on instrumenting AI agents with Langfuse.
 transition: slide-left
 duration: 45min
 highlighter: shiki
+routerMode: hash
 src: ./pages/01-cover.md
 ---
 
