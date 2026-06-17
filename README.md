@@ -20,7 +20,9 @@
 ```
 slides/              # Slidev presentation
 demo/                # Python demo agent
-  agent_traced.py    # tool-calling agent with Langfuse tracing
+  agent_raw.py       # tool-calling agent, no instrumentation
+  agent.py           # tool-calling agent with Langfuse tracing
+  regression.py      # good-data vs bad-data comparison (two scenarios)
   tools.py           # mock search + calculator tools
   pyproject.toml
   .env.example
@@ -83,11 +85,11 @@ To use a cloud model instead, set `MODEL=gpt-4o` and `OPENAI_API_KEY=sk-...` in 
 ### 4. Run the demo
 
 ```bash
-make demo         # run with Langfuse tracing
-make demo-debug   # same, with verbose iteration/token output
+make demo              # run with Langfuse tracing
+make demo-regression   # run good-data vs bad-data comparison
 ```
 
-Check traces at http://localhost:3000.
+Check traces at http://localhost:3000/traces.
 
 ### 5. Run the slides
 
@@ -100,6 +102,6 @@ make slides
 Record the Langfuse UI trace view after running `make demo`, then replace the placeholder in the slides:
 
 ```html
-<!-- slides/pages/07-demo.md — "The trace" slide -->
+<!-- slides/pages/10-demo.md — "The trace" slide -->
 <video src="./demo.mp4" controls style="width:100%; border-radius: 12px;" />
 ```

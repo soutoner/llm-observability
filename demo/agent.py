@@ -43,3 +43,5 @@ def run_agent(question: str) -> str:
 if __name__ == "__main__":
     question = "What is 15% of the population of Spain?"
     print(f"Q: {question}\nA: {run_agent(question)}")
+    langfuse_host = os.getenv("LANGFUSE_HOST", "http://localhost:3000")
+    print(f"\nTraces → {langfuse_host}/traces")

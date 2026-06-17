@@ -66,3 +66,5 @@ if __name__ == "__main__":
         "Both answers look plausible — open Langfuse to see what the search tool actually returned."
     )
     langfuse.flush()
+    langfuse_host = os.getenv("LANGFUSE_HOST", "http://localhost:3000")
+    print(f"Traces → {langfuse_host}/traces")
