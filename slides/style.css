@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+/* ── Tokens ─────────────────────────────────────────────── */
+:root {
+  --noc-navy:           #283046;
+  --noc-purple:         #7874F0;
+  --noc-green:          #4DD699;
+  --noc-coral:          #FF7E65;
+  --noc-card-light:     #F4F4F8;
+  --noc-outer-purple:   #7874F0;
+  --noc-outer-dark:     #283046;
+  --noc-outer-lavender: #C3CDE2;
+}
+
+/* ── Base ────────────────────────────────────────────────── */
+.slidev-layout {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+/* ── Cover ───────────────────────────────────────────────── */
+.slidev-layout.cover h1 {
+  font-size: 3.4rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+  margin: 0 0 1.5rem;
+}
+.slidev-layout.cover .subtitle {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--noc-purple);
+}
+.slidev-layout.cover .meta {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* ── Default (content slides) ────────────────────────────── */
+.slidev-layout.default h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--noc-navy);
+  margin: 0 0 1.2rem;
+}
+.slidev-layout.default h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--noc-purple);
+  margin: 0 0 0.5rem;
+}
+.slidev-layout.default p,
+.slidev-layout.default li {
+  color: var(--noc-navy);
+  font-size: 0.95rem;
+}
+.slidev-layout.default ul {
+  list-style: none;
+  padding: 0;
+}
+.slidev-layout.default ul li::before {
+  content: '→';
+  color: var(--noc-purple);
+  font-weight: 700;
+  margin-right: 0.6rem;
+}
+.slidev-layout.default code {
+  background: rgba(123, 111, 219, 0.12);
+  color: var(--noc-purple);
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+  font-size: 0.9em;
+}
+.slidev-layout.default table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+.slidev-layout.default th {
+  background: var(--noc-navy);
+  color: white;
+  padding: 0.5rem 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+.slidev-layout.default td {
+  padding: 0.45rem 1rem;
+  border-bottom: 1px solid rgba(37, 42, 65, 0.1);
+}
+.slidev-layout.default tr:nth-child(even) td {
+  background: rgba(37, 42, 65, 0.04);
+}
+
+/* ── Section ─────────────────────────────────────────────── */
+.slidev-layout.section h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  margin: 0 0 1.5rem;
+}
+.slidev-layout.section .section-number {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--noc-purple);
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.05em;
+}
+.slidev-layout.section .section-sub {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--noc-purple);
+  line-height: 1.25;
+}
+.slidev-layout.section .coral-dots {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 1.25rem;
+}
+.slidev-layout.section .dot-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.slidev-layout.section .dot-row .dot {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--noc-coral);
+  flex-shrink: 0;
+}
+.slidev-layout.section .dot-row .dot-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ffffff;
+  opacity: 0.85;
+}
+
+/* ── Shiki code blocks ───────────────────────────────────── */
+.slidev-layout .shiki {
+  border-radius: 12px;
+  font-size: 0.82rem !important;
+}
