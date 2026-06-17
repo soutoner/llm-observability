@@ -2,6 +2,8 @@
 
 45-minute talk on tracing agents with Langfuse. Hands-on demo using a Python tool-calling agent.
 
+Slides available at https://soutoner.github.io/llm-observability
+
 ## Prerequisites
 
 | Tool                                          | Version | Install                                                                   |
