@@ -44,10 +44,10 @@ docker-logs:
 docker-clean:
 	docker compose down -v --rmi local
 
-run:
+run-agent:
 	uv run --project demo python demo/agent.py
 
-run-raw:
+run-raw-agent:
 	uv run --project demo python demo/agent_raw.py
 
 run-regression:

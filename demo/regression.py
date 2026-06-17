@@ -67,4 +67,4 @@ if __name__ == "__main__":
     )
     langfuse.flush()
     langfuse_host = os.getenv("LANGFUSE_HOST", "http://localhost:3000")
-    print(f"Traces → {langfuse_host}/traces")
+    print(f"Traces → {langfuse_host}/project/llm-observability/traces")
