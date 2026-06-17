@@ -7,7 +7,7 @@ number: "03"
 
 ::right::
 
-<img :src="'/meme-non-determinism.jpg'" style="width: 90%; border-radius: 12px;" />
+<img :src="'./meme-non-determinism.jpg'" style="width: 90%; border-radius: 12px;" />
 
 <!--
 Open with this. Let it land. That's the problem we're solving today.
